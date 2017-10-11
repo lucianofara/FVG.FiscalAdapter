@@ -1,0 +1,5 @@
+c:\users\f15206\source\repos\FVG.FiscalAdapter.API\Infrastructure\bin\Debug\FVG.FiscalAdapter.Infrastructure.dll
+c:\users\f15206\source\repos\FVG.FiscalAdapter.API\Infrastructure\bin\Debug\FVG.FiscalAdapter.Infrastructure.pdb
+c:\users\f15206\source\repos\FVG.FiscalAdapter.API\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+c:\users\f15206\source\repos\FVG.FiscalAdapter.API\Infrastructure\obj\Debug\FVG.FiscalAdapter.Infrastructure.dll
+c:\users\f15206\source\repos\FVG.FiscalAdapter.API\Infrastructure\obj\Debug\FVG.FiscalAdapter.Infrastructure.pdb

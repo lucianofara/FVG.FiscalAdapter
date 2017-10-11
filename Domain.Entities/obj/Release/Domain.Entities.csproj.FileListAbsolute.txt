@@ -1,0 +1,6 @@
+C:\Users\f15206\source\repos\FVG.FiscalAdapter.API\Domain.Entities\bin\Release\FVG.FiscalAdapter.Domain.Entities.dll
+C:\Users\f15206\source\repos\FVG.FiscalAdapter.API\Domain.Entities\bin\Release\FVG.FiscalAdapter.Domain.Entities.pdb
+C:\Users\f15206\source\repos\FVG.FiscalAdapter.API\Domain.Entities\obj\Release\Domain.Entities.csproj.CoreCompileInputs.cache
+C:\Users\f15206\source\repos\FVG.FiscalAdapter.API\Domain.Entities\obj\Release\FVG.FiscalAdapter.Domain.Entities.dll
+C:\Users\f15206\source\repos\FVG.FiscalAdapter.API\Domain.Entities\obj\Release\FVG.FiscalAdapter.Domain.Entities.pdb
+C:\Users\f15206\source\repos\FVG.FiscalAdapter.API\Domain.Entities\obj\Release\Domain.Entities.csprojResolveAssemblyReference.cache
