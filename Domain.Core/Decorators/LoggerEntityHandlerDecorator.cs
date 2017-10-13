@@ -19,6 +19,8 @@ namespace FVG.FiscalAdapter.Domain.Core.Decorators
         {
             _logger.Info("Inicio de llamada", null);
             var result = _decorated.Print(document);
+            if (result.Exception != null)
+                _logger.Error(result.Exception);
             _logger.Info("Fin de llamada", null);
             return result;
         }

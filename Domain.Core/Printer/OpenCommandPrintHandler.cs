@@ -25,7 +25,7 @@ namespace FVG.FiscalAdapter.Domain.Core.Printer
                     curso = printer.DocumentoEnCurso;
                     if (curso != Documentos.D_NO_DOCUMENTO_EN_CURSO)
                     {
-                        ultimo = Comprobantes.GetUltimoComprobanteACancelar(curso, printer);
+                        ultimo = FiscalHelper.GetUltimoComprobanteACancelar(curso, printer);
                         printer.TratarDeCancelarTodo();
                     }
                 }
@@ -40,10 +40,16 @@ namespace FVG.FiscalAdapter.Domain.Core.Printer
 
                 //pedir comprobate
                 curso = printer.DocumentoEnCurso;
-                int receipt = Comprobantes.GetUltimoComprobanteACancelar(curso, printer);
+
+                DocPrinter doc = new DocPrinter();
+                doc.Class = FiscalHelper.GetDocumentClass(curso);
+                doc.DocDate = printer.FechaHoraFiscal;
+                doc.PosNum = FiscalHelper.GetPosNumer(printer);
+                doc.Type = FiscalHelper.GetDocumentType(curso);
+                doc.DocNum = FiscalHelper.GetUltimoComprobanteACancelar(curso, printer).ToString();
 
                 printer.Finalizar();
-                return new Success((ultimo != 0) ? ultimo.ToString() : string.Empty, receipt.ToString(), 0, curso.ToString());
+                return new Success((ultimo != 0) ? ultimo.ToString() : string.Empty, doc);
             }
             catch (Exception ex)
             {
@@ -53,14 +59,14 @@ namespace FVG.FiscalAdapter.Domain.Core.Printer
                     curso = printer.DocumentoEnCurso;
                     if (curso != Documentos.D_NO_DOCUMENTO_EN_CURSO)
                     {
-                        ultimo = Comprobantes.GetUltimoComprobanteACancelar(curso, printer);
+                        ultimo = FiscalHelper.GetUltimoComprobanteACancelar(curso, printer);
                         printer.TratarDeCancelarTodo();
                     }
                 }
                 catch (Exception)
                 { }
                 printer.Finalizar();
-                return new Fail((ultimo != 0) ? ultimo.ToString() : string.Empty, ex.Message);
+                return new Fail((ultimo != 0) ? ultimo.ToString() : string.Empty, ex.Message, ex);
             }
         }
     }

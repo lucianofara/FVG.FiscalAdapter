@@ -6,7 +6,6 @@ C:\Users\f15206\source\repos\FVG.FiscalAdapter.API\Domain.Entities\obj\Debug\FVG
 C:\Users\f15206\source\repos\FVG.FiscalAdapter.API\Domain.Entities\obj\Debug\Domain.Entities.csprojResolveAssemblyReference.cache
 C:\Users\f15206\Documents\Projects\FVG.FiscalAdapter\Domain.Entities\bin\Debug\FVG.FiscalAdapter.Domain.Entities.dll
 C:\Users\f15206\Documents\Projects\FVG.FiscalAdapter\Domain.Entities\bin\Debug\FVG.FiscalAdapter.Domain.Entities.pdb
-C:\Users\f15206\Documents\Projects\FVG.FiscalAdapter\Domain.Entities\obj\Debug\Domain.Entities.csprojResolveAssemblyReference.cache
 C:\Users\f15206\Documents\Projects\FVG.FiscalAdapter\Domain.Entities\obj\Debug\Domain.Entities.csproj.CoreCompileInputs.cache
 C:\Users\f15206\Documents\Projects\FVG.FiscalAdapter\Domain.Entities\obj\Debug\FVG.FiscalAdapter.Domain.Entities.dll
 C:\Users\f15206\Documents\Projects\FVG.FiscalAdapter\Domain.Entities\obj\Debug\FVG.FiscalAdapter.Domain.Entities.pdb

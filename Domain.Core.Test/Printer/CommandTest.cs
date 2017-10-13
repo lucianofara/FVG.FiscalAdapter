@@ -25,7 +25,7 @@ namespace FVG.FiscalAdapter.Domain.Core.Test.Printer
 
             Assert.Equal(1, result.Success);
             Assert.Empty(result.Error);
-            Assert.Null(result.Comprobante);
+            Assert.Null(result.Document);
         }
 
         [Theory]
@@ -47,7 +47,7 @@ namespace FVG.FiscalAdapter.Domain.Core.Test.Printer
 
             Assert.Equal(0, result.Success);
             Assert.NotEmpty(result.Error);
-            Assert.Null(result.Comprobante);
+            Assert.Null(result.Document);
         }
     }
 }

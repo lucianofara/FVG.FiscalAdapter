@@ -1,17 +1,20 @@
-﻿namespace FVG.FiscalAdapter.Domain.Core.Helpers
+﻿using System;
+
+namespace FVG.FiscalAdapter.Domain.Core.Helpers
 {
     public class Result
     {
         public int Success { get; set; }
         public string Error { get; set; }
-        public string Cancelado { get; set; }
-        public Comprobante Comprobante { get; set; }
+        public string DocumentCancel { get; set; }
+        public DocPrinter Document { get; set; }
+        public Exception Exception { get; set; }
 
         public Result()
         {
             Success = 0;
             Error = string.Empty;
-            Cancelado = string.Empty;
+            DocumentCancel = string.Empty;
         }
     }
 
@@ -22,33 +25,22 @@
             Success = 1;
         }
 
-        public Success(string cancelado) : base()
+        public Success(string documentCancel) : base()
         {
             Success = 1;
-            Cancelado = cancelado;
+            DocumentCancel = documentCancel;
         }
 
-        public Success(string cancelado, string comprobante, double importe, string tipoComprobante) : base()
+        public Success(DocPrinter document) : base()
         {
             Success = 1;
-            Comprobante = new Comprobante()
-            {
-                Importe = importe,
-                NroComprobante = comprobante,
-                Tipo = tipoComprobante
-            };
-            Cancelado = cancelado;
+            Document = document;
         }
-
-        public Success(string comprobante, double importe, string tipoComprobante) : base()
+        public Success(string documentCancel, DocPrinter document) : base()
         {
             Success = 1;
-            Comprobante = new Comprobante()
-            {
-                Importe = importe,
-                NroComprobante = comprobante,
-                Tipo = tipoComprobante
-            };
+            Document = document;
+            DocumentCancel = documentCancel;
         }
     }
 
@@ -59,17 +51,31 @@
             Error = error;
         }
 
-        public Fail(string cancelado, string error) : base()
+        public Fail(string documentCancel, string error) : base()
         {
-            Cancelado = cancelado;
+            DocumentCancel = documentCancel;
             Error = error;
+        }
+        public Fail(string documentCancel, string error, Exception exception) : base()
+        {
+            DocumentCancel = documentCancel;
+            Error = error;
+            Exception = exception;
+        }
+        public Fail(string error, Exception exception) : base()
+        {
+            Error = error;
+            Exception = exception;
         }
     }
 
-    public class Comprobante
+    public class DocPrinter
     {
-        public string Tipo { get; set; }
-        public string NroComprobante { get; set; }
-        public double Importe { get; set; }
+        public string Class { get; set; }
+        public string Type { get; set; }
+        public string DocNum { get; set; }
+        public double TotalAmount { get; set; }
+        public DateTime DocDate { get; set; }
+        public string PosNum { get; set; }
     }
 }

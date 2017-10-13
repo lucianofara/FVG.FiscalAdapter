@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\f15206\source\repos\FVG.FiscalAdapter.API\FVG.FiscalAdapter.API\bin\Release\PublishOutput</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\f15206\Documents\Projects\FVG.FiscalAdapter\Presentation.API\bin\Release\PublishOutput</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
@@ -25,16 +25,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/25/2017 05:11:08</publishTime>
     </File>
     <File Include="bin/Autofac.Integration.Mvc.dll">
-      <publishTime>04/10/2017 15:40:32</publishTime>
+      <publishTime>10/04/2017 15:40:32</publishTime>
     </File>
     <File Include="bin/Autofac.Integration.WebApi.dll">
-      <publishTime>08/02/2017 18:28:14</publishTime>
+      <publishTime>02/08/2017 18:28:14</publishTime>
     </File>
     <File Include="bin/FVG.FiscalAdapter.Domain.Core.dll">
-      <publishTime>10/11/2017 15:14:40</publishTime>
+      <publishTime>10/12/2017 15:42:26</publishTime>
     </File>
     <File Include="bin/FVG.FiscalAdapter.Domain.Core.pdb">
-      <publishTime>10/11/2017 15:14:40</publishTime>
+      <publishTime>10/12/2017 15:42:26</publishTime>
     </File>
     <File Include="bin/FVG.FiscalAdapter.Domain.Entities.dll">
       <publishTime>10/11/2017 15:14:39</publishTime>
@@ -43,49 +43,49 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/11/2017 15:14:39</publishTime>
     </File>
     <File Include="bin/FVG.FiscalAdapter.Presentation.API.dll">
-      <publishTime>10/11/2017 15:14:48</publishTime>
+      <publishTime>10/12/2017 15:42:34</publishTime>
     </File>
     <File Include="bin/FVG.FiscalAdapter.Presentation.API.pdb">
-      <publishTime>10/11/2017 15:14:48</publishTime>
+      <publishTime>10/12/2017 15:42:34</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>11/30/2016 16:07:42</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.DependencyCollector.dll">
-      <publishTime>12/07/2016 11:45:42</publishTime>
+      <publishTime>07/12/2016 11:45:42</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
-      <publishTime>12/07/2016 11:50:34</publishTime>
+      <publishTime>07/12/2016 11:50:34</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
-      <publishTime>12/06/2016 15:15:48</publishTime>
+      <publishTime>06/12/2016 15:15:48</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Web.dll">
-      <publishTime>12/07/2016 11:49:10</publishTime>
+      <publishTime>07/12/2016 11:49:10</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.WindowsServer.dll">
-      <publishTime>12/07/2016 11:50:34</publishTime>
+      <publishTime>07/12/2016 11:50:34</publishTime>
     </File>
     <File Include="bin/Microsoft.ApplicationInsights.dll">
-      <publishTime>12/06/2016 15:09:52</publishTime>
+      <publishTime>06/12/2016 15:09:52</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>08/15/2017 13:12:32</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.dll">
-      <publishTime>04/05/2017 11:53:36</publishTime>
+      <publishTime>05/04/2017 11:53:36</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
       <publishTime>05/04/2017 11:53:40</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>01/05/2012 11:08:46</publishTime>
+      <publishTime>05/01/2012 11:08:46</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>08/03/2014 20:33:56</publishTime>
+      <publishTime>03/08/2014 20:33:56</publishTime>
     </File>
     <File Include="bin/NLog.config">
-      <publishTime>05/10/2017 16:25:29</publishTime>
+      <publishTime>10/12/2017 15:41:50</publishTime>
     </File>
     <File Include="bin/NLog.dll">
       <publishTime>08/08/2017 19:19:52</publishTime>
@@ -256,7 +256,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2015 04:02:18</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>02/11/2014 15:26:04</publishTime>
+      <publishTime>11/02/2014 15:26:04</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
       <publishTime>01/28/2015 04:02:32</publishTime>
@@ -271,16 +271,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2015 04:04:30</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
-      <publishTime>09/10/2013 17:28:38</publishTime>
+      <publishTime>10/09/2013 17:28:38</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>10/02/2017 11:35:55</publishTime>
+      <publishTime>02/10/2017 11:35:55</publishTime>
     </File>
     <File Include="Test.html">
-      <publishTime>10/03/2017 17:15:59</publishTime>
+      <publishTime>03/10/2017 17:15:59</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/11/2017 15:14:48</publishTime>
+      <publishTime>10/12/2017 12:21:21</publishTime>
     </File>
   </ItemGroup>
 </Project>

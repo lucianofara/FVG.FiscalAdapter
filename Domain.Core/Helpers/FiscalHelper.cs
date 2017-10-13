@@ -2,7 +2,7 @@
 
 namespace FVG.FiscalAdapter.Domain.Core.Helpers
 {
-    public class Comprobantes
+    public class FiscalHelper
     {
         public static DocumentosFiscales GetTipoComprobante(string codigo)
         {
@@ -153,13 +153,66 @@ namespace FVG.FiscalAdapter.Domain.Core.Helpers
                     return DocumentosIVA.DOCUMENTOS_FISCALES;
             }
         }
-    }
 
-    public enum TiposDocumentos
-    {
-        FACTURA,
-        NOTA_CREDITO,
-        NOTA_DEBITO,
-        N_A
+        public static string GetDocumentClass(Documentos documento)
+        {
+            switch (documento)
+            {
+                case Documentos.D_FACTURA_A:
+                case Documentos.D_FACTURA_B:
+                case Documentos.D_FACTURA_C:
+                    return "FC";
+
+                case Documentos.D_NOTA_CREDITO_A:
+                case Documentos.D_NOTA_CREDITO_B:
+                case Documentos.D_NOTA_CREDITO_C:
+                    return "NC";
+
+                default:
+                    return "";
+            }
+
+        }
+
+        public static string GetDocumentType(Documentos documento)
+        {
+            switch (documento)
+            {
+                case Documentos.D_FACTURA_A:
+                case Documentos.D_NOTA_CREDITO_A:
+                    return "A";
+                case Documentos.D_NOTA_CREDITO_B:
+                case Documentos.D_FACTURA_B:
+                    return "B";
+                case Documentos.D_FACTURA_C:
+                case Documentos.D_NOTA_CREDITO_C:
+                    return "C";
+                default:
+                    return "";
+            }
+        }
+
+        public static string GetPosNumer(HASAR printer)
+        {
+            object cuit = string.Empty;
+            object razonSocial = string.Empty;
+            object numeroDeSerie = string.Empty;
+            object fechaInicializacion = string.Empty;
+            object numeroDePos = string.Empty;
+            object inicioDeActividades = string.Empty;
+            object codigoDeIngresosBrutos = string.Empty;
+            object responsabilidadAnteIva = string.Empty;
+
+            printer.ObtenerDatosDeInicializacion(out cuit, out razonSocial, out numeroDeSerie, out fechaInicializacion, out numeroDePos, out inicioDeActividades, out codigoDeIngresosBrutos, out responsabilidadAnteIva);
+            return numeroDePos.ToString();
+        }
+
+        public enum TiposDocumentos
+        {
+            FACTURA,
+            NOTA_CREDITO,
+            NOTA_DEBITO,
+            N_A
+        }
     }
 }

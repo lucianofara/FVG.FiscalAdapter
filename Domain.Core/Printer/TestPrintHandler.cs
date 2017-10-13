@@ -49,7 +49,7 @@ namespace FVG.FiscalAdapter.Domain.Core.Printer
                 catch (Exception)
                 { }
                 printer.Finalizar();
-                return new Fail(ex.Message);
+                return new Fail(ex.Message, ex);
             }
         }
     }

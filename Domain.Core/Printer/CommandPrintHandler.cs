@@ -29,11 +29,18 @@ namespace FVG.FiscalAdapter.Domain.Core.Printer
                     printer.Enviar(command);
 
                 double total = 0;
-                printer.LeerMontoTotal(Comprobantes.GetDocumentoIVA(curso), out total);
-                int receipt = Comprobantes.GetUltimoComprobanteACancelar(curso, printer);
+                printer.LeerMontoTotal(FiscalHelper.GetDocumentoIVA(curso), out total);
+
+                DocPrinter doc = new DocPrinter();
+                doc.Class = FiscalHelper.GetDocumentClass(curso);
+                doc.DocDate = printer.FechaHoraFiscal;
+                doc.PosNum = FiscalHelper.GetPosNumer(printer);
+                doc.Type = FiscalHelper.GetDocumentType(curso);
+                doc.DocNum = FiscalHelper.GetUltimoComprobanteACancelar(curso, printer).ToString();
+                doc.TotalAmount = total;
 
                 printer.Finalizar();
-                return new Success(receipt.ToString(), total, curso.ToString());
+                return new Success(doc);
             }
             catch (Exception ex)
             {
@@ -43,14 +50,14 @@ namespace FVG.FiscalAdapter.Domain.Core.Printer
                     curso = printer.DocumentoEnCurso;
                     if (curso != Documentos.D_NO_DOCUMENTO_EN_CURSO)
                     {
-                        ultimo = Comprobantes.GetUltimoComprobanteACancelar(curso, printer);
+                        ultimo = FiscalHelper.GetUltimoComprobanteACancelar(curso, printer);
                         printer.TratarDeCancelarTodo();
                     }
                 }
                 catch (Exception)
                 { }
                 printer.Finalizar();
-                return new Fail((ultimo == 0) ? string.Empty : ultimo.ToString(), ex.Message);
+                return new Fail((ultimo == 0) ? string.Empty : ultimo.ToString(), ex.Message, ex);
             }
         }
     }

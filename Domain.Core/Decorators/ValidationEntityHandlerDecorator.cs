@@ -24,7 +24,7 @@ namespace FVG.FiscalAdapter.Domain.Core.Decorators
             }
             catch (Exception ex)
             {
-                return new Fail(ex.Message);
+                return new Fail(ex.Message,ex);
             }
 
             return this.decorated.Print(document);

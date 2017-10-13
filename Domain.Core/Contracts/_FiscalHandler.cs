@@ -81,7 +81,7 @@ namespace FVG.FiscalAdapter.Domain.Core.Printer
             printer.Transporte = TiposDeTransporte.SOCKET_TCP;
             printer.DireccionIP = header.Ip;
             printer.Puerto = header.Port;
-            var modelo = Comprobantes.GetModeloFiscal(header.PrinterModel);
+            var modelo = FiscalHelper.GetModeloFiscal(header.PrinterModel);
             if (modelo != null)
                 printer.Modelo = (ModelosDeImpresoras)modelo;
             printer.ReintentoConstante = true;

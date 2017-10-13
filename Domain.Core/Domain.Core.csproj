@@ -58,7 +58,7 @@
     <Compile Include="Decorators\LoggerEntityHandlerDecorator.cs" />
     <Compile Include="Decorators\ValidationEntityHandlerDecorator.cs" />
     <Compile Include="Helpers\Result.cs" />
-    <Compile Include="Helpers\Comprobantes.cs" />
+    <Compile Include="Helpers\FiscalHelper.cs" />
     <Compile Include="Helpers\TipoCondicionIVA.cs" />
     <Compile Include="Logger\ILog.cs" />
     <Compile Include="Logger\NLog.cs" />
